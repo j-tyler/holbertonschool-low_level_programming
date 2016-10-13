@@ -1,0 +1,23 @@
+The basic step by step process gcc uses to compile your code.
+
+If you have ever written code in c you've almost certainly used gcc, clang, or lcc. These programs take the human readable code and translates it to machine code for execution. You don't need to know how these steps work to get c programs to run and you might not even particularly care, but if you are here, then I hope you want to pull the current back just a bit to see the steps that go into making your hardwork come alive.
+
+The first step gcc takes for us is running our code through the preprocessor. The most common step that most all c code uses is #include, which tells the compiler to include some other code to our file. This is often a standard library set like stdio.h or string.h, when we are working on large programs it could be our own set of function definitions and constants. The preprocessor also expands out macros-you can read this great tuitorial on macros by gcc gnu-completing the code for compilation. https://gcc.gnu.org/onlinedocs/cpp/Macros.html
+
+You can see what this code looks like by using the command gcc -E filename. In our sample code, the stdio library is a large portion of our code after preprocessing.
+
+-img-
+
+Once gcc has completely expanded the code with the preprocessor, it is time to turn our c into assembly--the compile step. Assembly code is the machine specific instructions to get the computer to execute the commands that make up our program. In the old days before pascal, c and 'modern' coding languages, much of programming was system and artitecture specific. This made writing programs for wider audiences very difficult as programs in assembly only run on the computers they were programmed for. 
+
+It is the compile step in the process that fixes the problems of portablilty. This is why many programs are shared as sourcecode, not compiled excutables. The gcc compiler is built with the instructions on how to compile c into assembly code that works on the compiling machine. 
+
+If your curious on how assembly code looks, you can stop gcc at this step with the -S flag and your filename.c assembly code will output in filename.s: gcc -S filename.c
+
+-img-
+
+The second to last part of the process is the assembler. At this step gcc takes the assembly code and turns it into machine code. You can see this output by using the GNU assembler http://tigcc.ticalc.org/doc/gnuasm.html, as, on assembly code such as as -o filename.o filename.s. This code is very close to being runnable, and is readable by your computer, but it is missing the final step: the linker.
+
+In practice, programs require standard librarys and access to specific system functions like input/output. The linker takes our machine code and links it correctly to the libraries required, finally leaving use with our completed compilation.  This is the output you see when you aren't digging below the surface and run gcc filename.c.
+
+
