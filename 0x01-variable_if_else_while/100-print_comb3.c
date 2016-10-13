@@ -3,10 +3,10 @@
 /**
  * main - print all numbers from 00 to 99 where the first numb is < last numb
  *
- * Return: Void
+ * Return: 0
  */
 
-void main(void)
+int main(void)
 {
 	int i, j;
 
@@ -27,4 +27,5 @@ void main(void)
 		}
 	}
 	putchar(10);
+	return (0);
 }

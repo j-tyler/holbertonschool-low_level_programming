@@ -4,10 +4,10 @@
  * main - print all numbers 012 to 789 where
  * first numb < second numb < thrid numb
  *
- * Return: Void
+ * Return: 0
  */
 
-void main(void)
+int main(void)
 {
 	int i, j, k;
 
@@ -32,4 +32,5 @@ void main(void)
 		}
 	}
 	putchar(10);
+	return (0);
 }
