@@ -31,7 +31,9 @@ int main(void)
 		mb = oldnb;
 		if (nb)
 			printf("%ld", nb);
-		printf("%ld, ", ns);
+		printf("%ld", ns);
+		if (i < 98)
+		printf(", ");
 	}
 	printf("\n");
 	return (0);
