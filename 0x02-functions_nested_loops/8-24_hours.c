@@ -2,7 +2,7 @@
 
 /**
  * jack_bauer - Print all 60*24 minutes in the day
- * 
+ *
  * Return: 0
  */
 
