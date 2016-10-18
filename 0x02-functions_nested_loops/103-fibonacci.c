@@ -11,7 +11,7 @@ int main(void)
 	int i;
 	long n, m, sum;
 
-	sum = 0;
+	sum = 2;
 	m = 1;
 	n = 2;
 	for (i = m + n; i <= 32; i++)
