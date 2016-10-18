@@ -8,7 +8,7 @@
 
 int main(void)
 {
-	long i, ms, mb, ns, nb, oldns, oldnb;
+	long i, ms, mb, ns, nb, oldns, oldnb, zerocount;
 
 	ns = 2;
 	ms = 1;
@@ -30,7 +30,15 @@ int main(void)
 		nb = nb + mb;
 		mb = oldnb;
 		if (nb)
+		{
 			printf("%ld", nb);
+			zerocount = ns;
+			while (zerocount < 100000000)
+			{
+				printf("0");
+				zerocount *= 10;
+			}
+		}
 		printf("%ld", ns);
 		if (i < 98)
 		printf(", ");
