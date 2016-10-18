@@ -2,7 +2,7 @@
 
 /**
  * main - print sum of all numbers below 1024 that are multiples
- * 
+ *
  * Return: 0
  */
 
