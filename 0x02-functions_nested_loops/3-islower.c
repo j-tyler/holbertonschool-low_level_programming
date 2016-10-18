@@ -1,7 +1,7 @@
 #include "holberton.h"
 
 /**
- * _islower
+ * _islower - check if arg is lowercase
  * @c: int to be checked
  *
  * Return: 1 if lowercase, else 0
