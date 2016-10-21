@@ -23,7 +23,7 @@ void print_number(int n)
 		_putchar('0');
 	}
 
-	while (n > 0)
+	while (n > 0 && size > 1)
 	{
 		if (n > size)
 		{
