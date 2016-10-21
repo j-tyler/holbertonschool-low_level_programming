@@ -8,10 +8,9 @@
 
 void print_number(int n)
 {
-	int size, zeroflag;
+	int size;
 
-	size = 1000000000;
-	zeroflag = 0;
+	size = 100000000;
 
 	if (n < 0)
 	{
@@ -23,19 +22,23 @@ void print_number(int n)
 		_putchar('0');
 	}
 
-	while (n > 0 && size > 1)
+	while (size > 0)
 	{
-		if (n > size)
+		if (n >= size)
 		{
-			_putchar(n / size + '0');
-			n = n % size;
-			zeroflag = 1;
+			if (size >= 10)
+			{
+				_putchar((n / size) % 10 + '0');
+			}
+			else
+			{
+				_putchar(n % 10 + '0');
+				n = 0;
+			}
 		}
-		else if (zeroflag == 1)
-		{
-			_putchar('0');
-			zeroflag = 0;
-		}
-		size = size / 10;
+		if (size > 1)
+			size = size / 10;
+		else
+			size = 0;
 	}
 }
