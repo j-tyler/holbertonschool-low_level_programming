@@ -10,7 +10,7 @@ void print_number(int n)
 {
 	int size;
 
-	size = 100000000;
+	size = 1000000000;
 
 	if (n < 0)
 	{
