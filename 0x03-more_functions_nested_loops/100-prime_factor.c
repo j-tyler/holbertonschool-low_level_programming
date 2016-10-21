@@ -10,6 +10,7 @@
 int main(void)
 {
 	printf("%d\n", largestprime(612852475143, 2));
+	return (0);
 }
 
 /**
