@@ -1,11 +1,11 @@
 #include "holberton.h"
 
 /**
- * puts_half - print only even indexed chars from arg
+ * puts2 - print only even indexed chars from arg
  * @str: string to print from
  */
 
-void puts_half(char *str)
+void puts2(char *str)
 {
 	int i;
 
