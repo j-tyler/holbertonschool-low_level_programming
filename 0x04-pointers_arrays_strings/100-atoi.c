@@ -25,13 +25,13 @@ int _atoi(char *s)
 
 	while (*s >= '0' && *s <= '9')
 	{
-		if (n > 0)
+		if (n < 0)
 			n *= 10;
-		n += (int)(*s - '0');
+		n -= (int)(*s - '0');
 		s++;
 	}
 
-	if (neg % 2 != 0)
+	if (neg % 2 == 0)
 		n *= -1;
 	return (n);
 }
