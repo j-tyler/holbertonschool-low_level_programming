@@ -1,6 +1,4 @@
 #include <stdio.h>
-#define HACKER ?
-
 
 /**
  * leet - turn aeotl into 43071 respectively
@@ -17,13 +15,15 @@ char *leet(char *s)
 
 	temp  = s;
 
-	while (*s++)
+	while (*s)
 	{
-		(*s == 'a' || *s == 'A') HACKER *s = '4' : 0;
-		(*s == 'e' || *s == 'E') HACKER *s = '3' : 0;
-		(*s == 'o' || *s == 'O') HACKER *s = '0' : 0;
-		(*s == 't' || *s == 'T') HACKER *s = '7' : 0;
-		(*s == 'l' || *s == 'L') HACKER *s = '1' : 0;
+		(*s == 'a' || *s == 'A') ? *s = '4' : 0;
+		(*s == 'e' || *s == 'E') ? *s = '3' : 0;
+		(*s == 'o' || *s == 'O') ? *s = '0' : 0;
+		(*s == 't' || *s == 'T') ? *s = '7' : 0;
+		if (*s == 'l' || *s == 'L')
+			(*s) = '1';
+		s++;
 	}
 
 	return (temp);
