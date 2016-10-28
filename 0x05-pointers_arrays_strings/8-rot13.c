@@ -26,14 +26,15 @@ int _ischar(char c)
 
 char *rot13(char *s)
 {
-char *tmp;
+	char *tmp;
 
-tmp = s;
-do {
-	if (_ischar(*s))
-	{
-		((*s >= 'a' && *s <= 'm') || (*s >= 'A' && *s <= 'M')) ? *s += 13 : -=13;
-	}
-} while (*s++);
-return (tmp);
+	tmp = s;
+	do {
+		if (_ischar(*s))
+		{
+			((*s >= 'a' && *s <= 'm') ||
+			(*s >= 'A' && *s <= 'M')) ? (*s = *s + 13) : (*s = *s - 13);
+		}
+	} while (*s++);
+	return (tmp);
 }
