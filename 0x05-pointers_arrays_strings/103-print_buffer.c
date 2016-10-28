@@ -21,7 +21,7 @@ void print_buffer(char *b, int size)
 	{
 		printf("%08x: ", counter);
 		do {
-			if (*b > 31 && *b < 127)
+			if (*b >= ' ' && *b <= '~')
 				s[counter % 10] = *b;
 			else
 				s[counter % 10] = '.';
@@ -31,9 +31,9 @@ void print_buffer(char *b, int size)
 
 			if (counter % 2 == 0)
 				printf(" ");
-
-
 		} while (counter % 10 != 0 && size > counter);
+
+
 		while (counter % 10 != 0 && counter >= size)
 		{
 			s[counter % 10] = '\0';
