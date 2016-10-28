@@ -45,6 +45,6 @@ void print_buffer(char *b, int size)
 		}
 		printf("%s\n", s);
 	}
-
-
+	if (size < 1)
+		printf("\n");
 }
