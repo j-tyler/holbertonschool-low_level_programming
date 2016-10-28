@@ -13,6 +13,8 @@ char *cap_string(char *s)
 	char prev;
 
 	temp = s;
+	if (*s <= 'z' && *s >= 'a')
+		*s -= 32;
 	do {
 		if (*s <= 'z' && *s >= 'a')
 		{
