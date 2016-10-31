@@ -14,8 +14,6 @@ char *_strpbrk(char *s, char *accept)
 	int flag, c;
 
 	flag = 1;
-	if (*s == '\0')
-		return (s);
 	while (*s && flag)
 	{
 		c = 0;
