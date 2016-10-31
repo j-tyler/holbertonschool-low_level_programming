@@ -2,7 +2,7 @@
 
 /**
  * print_chessboard - print out a chessboard
- * @(*a)[8]: Layout to print
+ * @a: Layout to print
  */
 
 void print_chessboard(char (*a)[8])
@@ -14,5 +14,5 @@ void print_chessboard(char (*a)[8])
 		for (j = 0; j < 8; j++)
 			_putchar((*a)[j]);
 		_putchar('\n');
-	}	
+	}
 }
