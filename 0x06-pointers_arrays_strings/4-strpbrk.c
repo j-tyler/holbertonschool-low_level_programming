@@ -16,7 +16,8 @@ char *_strpbrk(char *s, char *accept)
 	flag = 1;
 	if (*s == '\0')
 		return (s);
-	do {
+	while (*s && flag)
+	{
 		c = 0;
 		while (*(accept + c) != '\0' && flag)
 		{
@@ -24,6 +25,8 @@ char *_strpbrk(char *s, char *accept)
 				flag = 0;
 			c++;
 		}
-	} while (flag && *s++);
-	return (s - 1);
+		if (flag == 1)
+			s++;
+	}
+	return (s);
 }
