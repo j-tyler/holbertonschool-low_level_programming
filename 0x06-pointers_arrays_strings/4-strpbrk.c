@@ -25,5 +25,5 @@ char *_strpbrk(char *s, char *accept)
 			c++;
 		}
 	} while (flag && *s++);
-	return (s);
+	return (s - 1);
 }
