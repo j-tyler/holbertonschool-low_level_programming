@@ -20,7 +20,6 @@ unsigned int _strspn(char *s, char *accept)
 			if (*(accept + i) == *s)
 				break;
 		}
-			
 		if (*(accept + i) != '\0')
 			n++;
 		else
