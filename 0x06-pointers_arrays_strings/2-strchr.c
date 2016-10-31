@@ -1,5 +1,5 @@
 #include "holberton.h"
-#include <stdio.h>
+
 /**
  * _strchr - Find first occurrence of c in s
  * @s: String to search
@@ -17,9 +17,5 @@ char *_strchr(char *s, char c)
 		if (*s == c)
 			found = 1;
 	} while (found == 0 && *s++ != '\0');
-
-	if (found == 0)
-		return (NULL);
-	else
-		return (s);
+	return (s);
 }
