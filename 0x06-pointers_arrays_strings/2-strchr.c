@@ -8,16 +8,11 @@
  *
  * Return: Pointer to first occurrence of c in s, else NULL
  */
-
 char *_strchr(char *s, char c)
 {
-	if (c == '\0')
-		return (NULL);
-	while (*s != '\0')
-	{
+	do {
 		if (*s == c)
 			return (s);
-		s++;
-	}
+	} while (*s++);
 	return (NULL);
 }
