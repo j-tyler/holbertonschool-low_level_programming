@@ -1,4 +1,5 @@
 #include "holberton.h"
+#include <stdlib.h>
 
 /**
  * _strchr - Find first occurrence of c in s
@@ -16,5 +17,5 @@ char *_strchr(char *s, char c)
 			return (s);
 		s++;
 	}
-	return (0);
+	return (NULL);
 }
