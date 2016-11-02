@@ -1,5 +1,5 @@
 #include "holberton.h"
-#include <stdio.h>
+
 /**
  * is_palindrome - Checks to see if string is a palindrome
  * @s: string to check
@@ -41,6 +41,8 @@ int is_palindrome(char *s)
 		templen--;
 		permlen = templen;
 		findlen = 0;
+		if (templen < 0)
+			return (1);
 		return (is_palindrome(--s));
 	}
 }
