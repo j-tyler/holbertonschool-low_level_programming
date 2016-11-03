@@ -14,7 +14,7 @@ static int _revcmp(char *s1, char *s2, int flag)
 		return (_revcmp(++s1, s2, 1));
 	else if (flag && *s2 != '\0')
 		return (_revcmp(s1, ++s2, 1));
-	else if (flag && s1 == '\0' && s2 == '\0')
+	else if (flag && *s1 == '\0' && *s2 == '\0')
 		return (_revcmp(--s1, --s2, 0));
 
 	if (*s2 == '*')
