@@ -9,39 +9,39 @@
 
 int is_palindrome(char *s)
 {
-	static int findlen = 1, templen = -1, permlen;
+	static int findlen = 1, len = -1, count;
 
 	if (findlen == 0)
 	{
-		if (templen <= permlen / 2)
+		if (count > len / 2)
 		{
-			findlen = 1, templen = 0;
+			findlen = 1, len = 0;
 			return (1);
 		}
-		else if (*s == *(s - templen))
+		else if (*(s - count) == *(s - len + count))
 		{
-			templen = templen - 2;
-			return (1 * is_palindrome(--s));
+			count++;
+			return (is_palindrome(s));
 		}
 		else
 		{
-			findlen = 1, templen = 0;
+			findlen = 1, len = 0;
 			return (0);
 		}
 	}
 	else if (findlen && *s != '\0')
 	{
-		if (templen == -1)
-			templen = 0;
-		templen++;
+		if (len == -1)
+			len = 0;
+		len++;
 		return (is_palindrome(++s));
 	}
 	else
 	{
-		templen--;
-		permlen = templen;
+		len--;
 		findlen = 0;
-		if (templen < 0)
+		count = 0;
+		if (len < 0)
 			return (1);
 		return (is_palindrome(--s));
 	}
