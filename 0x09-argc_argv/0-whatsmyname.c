@@ -2,8 +2,8 @@
 
 /**
  * main - prints the filename of this program
- * @argc - argument count
- * @argv - argument array
+ * @argc: argument count
+ * @argv: argument array
  *
  * Return: Always 0
  */
