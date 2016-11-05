@@ -14,7 +14,7 @@ int main(int argc, char *argv[])
 
 	for (i = 1, sum = 0; i < argc; i++)
 	{
-		if (atoi(argv[i]) < 1)
+		if (atoi(argv[i]) < 0)
 		{
 			printf("Error\n");
 			return (1);
