@@ -36,6 +36,11 @@ int main(int argc, char *argv[])
 			coins++;
 			*argv[1] -= 5;
 		}
+		else if (*argv[1] >= 2)
+		{
+			coins++;
+			*argv[1] -= 2;
+		}
 		else if (*argv[1] >= 1)
 		{
 			coins++;
