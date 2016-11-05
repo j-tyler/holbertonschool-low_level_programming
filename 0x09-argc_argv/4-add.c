@@ -15,7 +15,7 @@ int main(int argc, char *argv[])
 
 	for (i = 1, sum = 0; i < argc; i++)
 	{
-		if (!isdigit(*argv[i]) || atoi(argv[i]) < 0)
+		if (*argv[i] == 0 || atoi(argv[i]) <= 0)
 		{
 			printf("Error\n");
 			return (1);
