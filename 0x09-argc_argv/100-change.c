@@ -9,7 +9,7 @@
  */
 int main(int argc, char *argv[])
 {
-	int coins;
+	int coins, change;
 
 	if (argc != 2)
 	{
@@ -17,34 +17,34 @@ int main(int argc, char *argv[])
 		return (1);
 	}
 
-	*argv[1] = atoi(argv[1]);
+	change = atoi(argv[1]);
 	coins = 0;
-	while (*argv[1] >= 25)
+	while (change >= 25)
 	{
 		coins++;
-		*argv[1] -= 25;
+		change -= 25;
 	}
-	while (*argv[1] > 0)
+	while (change > 0)
 	{
-		if (*argv[1] >= 10)
+		if (change >= 10)
 		{
 			coins++;
-			*argv[1] -= 10;
+			change -= 10;
 		}
-		else if (*argv[1] >= 5)
+		else if (change >= 5)
 		{
 			coins++;
-			*argv[1] -= 5;
+			change -= 5;
 		}
-		else if (*argv[1] >= 2)
+		else if (change >= 2)
 		{
 			coins++;
-			*argv[1] -= 2;
+			change -= 2;
 		}
-		else if (*argv[1] >= 1)
+		else if (change >= 1)
 		{
 			coins++;
-			*argv[1] -= 1;
+			change -= 1;
 		}
 	}
 	printf("%d\n", coins);
