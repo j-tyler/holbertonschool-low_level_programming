@@ -106,6 +106,8 @@ char **strtow(char *str)
 	words = _wordcount(str);
 
 	arr = malloc((words + 1) * sizeof(void *));
+	if (arr == NULL)
+		return (NULL);
 	for (i = 0; i < words; i++)
 	{
 
