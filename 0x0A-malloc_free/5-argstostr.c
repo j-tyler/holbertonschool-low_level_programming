@@ -10,8 +10,7 @@
  */
 char *argstostr(int ac, char **av)
 {
-	unsigned int nulcount, len;
-	int i, j;
+	int nulcount, len, i, j;
 	char *p;
 
 	if (ac == 0 || av == NULL)
