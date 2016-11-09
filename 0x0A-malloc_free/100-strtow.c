@@ -1,6 +1,6 @@
 #include "holberton.h"
 #include <stdlib.h>
-/**i
+/**
  * _wordcount - count words in a string
  * @s: string to count words
  *
@@ -100,8 +100,10 @@ char **strtow(char *str)
 	int words, i;
 	char **arr;
 
-	words = _wordcount(str);
+	if (str == NULL || *str == '\0')
+		return(NULL);
 
+	words = _wordcount(str);
 
 	arr = malloc((words + 1) * sizeof(void *));
 	for (i = 0; i < words; i++)
