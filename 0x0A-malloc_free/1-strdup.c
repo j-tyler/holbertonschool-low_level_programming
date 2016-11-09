@@ -9,7 +9,7 @@
 char *_strdup(char *str)
 {
 	char *p;
-	int size;
+	unsigned int size, i;
 
 	if (str == NULL)
 		return (NULL);
@@ -22,11 +22,11 @@ char *_strdup(char *str)
 	if (p == NULL)
 		return (NULL);
 
-	size = 0;
-	while (*(str + size))
+	i = 0;
+	while (*(str + i))
 	{
-		*(p + size) = *(str + size);
-		size++;
+		*(p + i) = *(str + i);
+		i++;
 	}
 	return (p);
 }
