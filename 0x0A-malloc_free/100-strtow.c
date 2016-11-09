@@ -112,6 +112,14 @@ char **strtow(char *str)
 	{
 
 		*(arr + i) = malloc(_wordsize(str, i + 1) + 1);
+		if (*(arr + i) == NULL)
+		{
+			for (i = i - i; i >= 0; i--)
+				free(*(arr + i));
+			free(arr);
+			return (NULL);
+
+		}
 	}
 	for (i = 0; i < words; i++)
 	{
