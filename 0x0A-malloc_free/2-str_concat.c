@@ -24,14 +24,21 @@ int _strlen(char *s)
  */
 char *str_concat(char *s1, char *s2)
 {
-	char *snew;
+	char *snew, *empty;
 	int i, size1, size2;
 
+	empty = "";
+
+	if (s1 == NULL)
+		s1 = empty;
+	if (s2 == NULL)
+		s2 = empty;
 	size1 = _strlen(s1);
 	size2 = _strlen(s2) + 1;
 
 	snew = malloc(size1 + size2);
-
+	if (snew == NULL)
+		return (NULL);
 	for (i = 0; i < size1; i++)
 	{
 		*(snew + i) = *(s1 + i);
