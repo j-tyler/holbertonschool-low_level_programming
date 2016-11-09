@@ -108,13 +108,13 @@ char **strtow(char *str)
 	arr = malloc((words + 1) * sizeof(void *));
 	if (arr == NULL)
 		return (NULL);
+
 	for (i = 0; i < words; i++)
 	{
-
 		*(arr + i) = malloc(_wordsize(str, i + 1) + 1);
 		if (*(arr + i) == NULL)
 		{
-			for (i = i - i; i >= 0; i--)
+			for (i = i - 1; i >= 0; i--)
 				free(*(arr + i));
 			free(arr);
 			return (NULL);
