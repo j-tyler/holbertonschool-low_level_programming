@@ -18,7 +18,7 @@ int _wordcount(char *s)
 			wordflag = 1;
 			count++;
 		}
-		
+
 		if (wordflag && (*s > '~' || *s < '!'))
 		{
 			wordflag = 0;
@@ -39,9 +39,9 @@ int _wordsize(char *s, int n)
 
 	wordflag = 0;
 	size = 0;
-        do {
+	do {
 		if (wordflag == 0 && *s <= '~' && *s >= '!')
-		{	
+		{
 			wordflag = 1;
 			n--;
 		}
@@ -65,27 +65,27 @@ int _wordsize(char *s, int n)
  */
 void _cpyarr(char *s, char *sdest, int n)
 {
-        int wordflag, i;
+	int wordflag, i;
 
-        wordflag = 0;
+	wordflag = 0;
 	i = 0;
-        do {
-                if (wordflag == 0 && *s <= '~' && *s >= '!')
-                {
-                        wordflag = 1;
-                        n--;
-                }
-                if (wordflag && n == 0 && *s <= '~' && *s >= '!')
-                {
+	do {
+		if (wordflag == 0 && *s <= '~' && *s >= '!')
+		{
+			wordflag = 1;
+			n--;
+		}
+		if (wordflag && n == 0 && *s <= '~' && *s >= '!')
+		{
 			*(sdest + i) = *s;
 			i++;
-                }
+		}
 
-                if (wordflag && (*s > '~' || *s < '!'))
-                {
-                        wordflag = 0;
-                }
-        } while (*s++);
+		if (wordflag && (*s > '~' || *s < '!'))
+		{
+			wordflag = 0;
+		}
+	} while (*s++);
 	*(sdest + i + 1) = '\0';
 }
 
@@ -114,6 +114,6 @@ char **strtow(char *str)
 		_cpyarr(str, *(arr + i), i + 1);
 	}
 	*(arr + i + 1) = NULL;
-	
-	return (arr);	
+
+	return (arr);
 }
