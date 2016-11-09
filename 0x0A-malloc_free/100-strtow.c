@@ -101,7 +101,7 @@ char **strtow(char *str)
 	char **arr;
 
 	if (str == NULL || *str == '\0')
-		return(NULL);
+		return (NULL);
 
 	words = _wordcount(str);
 
