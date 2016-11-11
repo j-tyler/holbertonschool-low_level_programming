@@ -141,7 +141,7 @@ int cut_zeros(char *s)
 	}
 	i--;
 	s--;
-	while (*s == '0')
+	while (*s == '0' && i > 0)
 	{
 		*s = '\0';
 		s--;
