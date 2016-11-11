@@ -25,5 +25,5 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 		*(memset + (i * size)) = 0;
 	}
 
-	return (space);	
+	return (space);
 }
