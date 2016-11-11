@@ -172,7 +172,10 @@ int main(int argc, char *argv[])
 	for (l2 = 0; argv[2][l2]; l2++)
 		;
 	lsum = l1 + l2, final = malloc((lsum + 2) * sizeof(*final));
-	calc = _calloc(lsum * lsum, sizeof(int)),	rev_(argv[1]), rev_(argv[2]);
+	calc = _calloc(lsum * lsum, sizeof(int))
+	if (calc == NULL)
+		return (NULL);
+	rev_(argv[1]), rev_(argv[2]);
 	for (i = 0; i < l1; i++)
 	{
 		rolltmp = 0, ntmp = 0;
