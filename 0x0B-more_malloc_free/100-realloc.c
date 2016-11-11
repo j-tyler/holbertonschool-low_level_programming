@@ -25,7 +25,7 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 	space = malloc(new_size);
 	if (space == NULL)
 		return (NULL);
- 	/* if ptr is null, return space without copying */
+	/* if ptr is null, return space without copying */
 	if (ptr == NULL)
 		return (space);
 	/* copy old contents into new space */
