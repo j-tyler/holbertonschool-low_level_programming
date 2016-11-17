@@ -16,7 +16,7 @@ int (*get_op_func(char *s))(int, int)
 		{"%", op_mod},
 		{NULL, NULL}
 	};
-	return (s[0] == '+' ? ops[0].f : s[0] == '-' ? &op_sub :
-	 s[0] == '*' ? &op_mul : s[0] == '/' ? &op_div :
-	 s[0] == '%' ? &op_mod : NULL);
+	return (s[0] == '+' ? ops[0].f : s[0] == '-' ? ops[1].f :
+	 s[0] == '*' ? ops[2].f : s[0] == '/' ? ops[3].f :
+	 s[0] == '%' ? ops[4].f : NULL);
 }
