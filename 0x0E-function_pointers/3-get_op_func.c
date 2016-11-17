@@ -11,12 +11,9 @@ int (*get_op_func(char *s))(int, int)
 	int i;
 	op_t ops[] = {
 		{"+", op_add},
-		{"-", op_sub},
-		{"*", op_mul},
-		{"/", op_div},
 	};
 	i = 0;
-	return (s[i] == '+' ? ops[i].f : s[0] == '-' ? ops[1].f :
-	 s[0] == '*' ? ops[2].f : s[0] == '/' ? ops[3].f :
+	return (s[i] == '+' ? ops[i].f : s[0] == '-' ? &(op_sub) :
+	 s[0] == '*' ? &(op_mul) : s[0] == '/' ? &(op_div) :
 	 s[0] == '%' ? &(op_mod) : NULL);
 }
