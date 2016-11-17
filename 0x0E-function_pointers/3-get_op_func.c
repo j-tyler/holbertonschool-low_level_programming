@@ -9,9 +9,18 @@
  */
 int (*get_op_func(char *s))(int, int)
 {
-	int (*f)(int, int);
+	int i;
+	op_t ops[] = {
+		{"+", op_add},
+		{"-", op_sub},
+		{"*", op_mul},
+		{"/", op_div},
+		{"%", op_mod},
+		{NULL, NULL}
+	};
 
-	f = NULL;
-	s[1] != '\0' ? 0 : s[0] == '+' ? f = &op_add : s[0] == '-' ? f = &op_sub : s[0] == '*' ? f = &op_mul : s[0] == '/' ? f = &op_div : s[0] == '%' ? f = &op_mod : 0;
-	return (f);
+	for (i = 0; i < 5; i++)
+		if (*(ops[i]).op == *s)
+			return (ops[i].f);
+	return (NULL);
 }
