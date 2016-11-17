@@ -8,7 +8,15 @@
  */
 int (*get_op_func(char *s))(int, int)
 {
-	return (s[0] == '+' ? &op_add : s[0] == '-' ? &op_sub :
+	op_t ops[] = {
+		{"+", op_add},
+		{"-", op_sub},
+		{"*", op_mul},
+		{"/", op_div},
+		{"%", op_mod},
+		{NULL, NULL}
+	};
+	return (s[0] == '+' ? ops[0].f : s[0] == '-' ? &op_sub :
 	 s[0] == '*' ? &op_mul : s[0] == '/' ? &op_div :
 	 s[0] == '%' ? &op_mod : NULL);
 }
