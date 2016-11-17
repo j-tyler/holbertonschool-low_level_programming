@@ -20,5 +20,5 @@ int (*get_op_func(char *s))(int, int)
 	i = 0;
 	return (s[i] == '+' ? ops[i].f : s[0] == '-' ? ops[1].f :
 	 s[0] == '*' ? ops[2].f : s[0] == '/' ? ops[3].f :
-	 s[0] == '%' ? ops[4].f : NULL);
+	 s[0] == '%' ? &(op_mod) : NULL);
 }
