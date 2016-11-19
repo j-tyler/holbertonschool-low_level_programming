@@ -13,7 +13,7 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 	const char *c;
 
 	if (separator == NULL)
-		c ="";
+		c = "";
 	else
 		c = separator;
 
