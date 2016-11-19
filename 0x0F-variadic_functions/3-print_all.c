@@ -63,7 +63,7 @@ void print_all(const char * const format, ...)
 
 	j = 0;
 	s = "";
-	while (*(format + j) != '\0')
+	while (format != NULL && *(format + j) != '\0')
 	{
 		i = 0;
 		while (i < 4 && *(format + j) != p[i].c[0])
