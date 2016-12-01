@@ -23,7 +23,7 @@ int _check_and_free(listint_t *head, listint_safe *prev)
 	while (tmp != NULL && tmp->addy != head)
 		tmp = tmp->next;
 	if (tmp != NULL)
-		return (1);
+		return (0);
 
 	count = 1;
 	count += _check_and_free(head->next, &node);
