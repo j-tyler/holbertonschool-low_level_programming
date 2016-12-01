@@ -24,7 +24,7 @@ int _check_and_print(const listint_t *head, listint_safe *prev)
 	if (tmp != NULL)
 	{
 		printf("-> [%p] %d\n", (void *)head, head->n);
-		return (1);
+		return (0);
 	}
 
 	printf("[%p] %d\n", (void *)head, head->n);
