@@ -38,8 +38,10 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int index, int n)
 		i++;
 	}
 	if (i != index - 1)
+	{
+		free(new);
 		return (NULL);
-
+	}
 	new->n = n;
 	new->next = tmpnode->next;
 	tmpnode->next = new;
