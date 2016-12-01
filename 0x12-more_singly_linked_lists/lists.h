@@ -18,7 +18,6 @@ typedef struct listint_s
 } listint_t;
 /**
  * struct listint_safe - singly linked list
- * @n: integer
  * @addy: address of this sister node
  * @next: points to the next node
  *
@@ -27,7 +26,6 @@ typedef struct listint_s
  */
 typedef struct listint_safe
 {
-	int n;
 	const listint_t *addy;
 	struct listint_safe *next;
 } listint_safe;
