@@ -1,21 +1,5 @@
 #include "holberton.h"
 /**
- * _strlen - helper strlen function
- * @s: string to find length of
- *
- * Return: Length of string
- */
-int _strlen(char *s)
-{
-	int i;
-
-	i = 0;
-	while (s[i])
-		i++;
-
-	return (i);
-}
-/**
  * create_file - create a file
  * @filename: name of the file
  * @text_content: content for the file
@@ -40,7 +24,6 @@ int create_file(const char *filename, char *text_content)
 	}
 
 	err = 0;
-	bytes = _strlen(text_content);
 	while (text_content[bytes])
 		bytes++;
 	if (bytes > 0)
