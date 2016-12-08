@@ -17,21 +17,21 @@ ssize_t read_textfile(const char *filename, size_t letters)
 		return (0);
 
 	if (filename == NULL)
-		free(buf); return (0);
+		return (0);
 	fd = open(filename, O_RDONLY);
 	if (fd == -1)
-		free(buf); return (0);
+		return (0);
 
 	n = read(fd, buf, letters);
 	if (n == -1)
-		free(buf); return (0);
+		return (0);
 	if (n > 0)
 		n = write(1, buf, n);
 	if (n == -1)
-		free(buf); return (0);
+		return (0);
 	err = close(fd);
 	if (err == -1)
-		free(buf); return (0);
+		return (0);
 	free(buf);
 	return (n);
 }
