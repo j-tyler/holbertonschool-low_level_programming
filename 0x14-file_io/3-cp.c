@@ -33,7 +33,10 @@ int main(int ac, char **av)
 
 	if (ac != 3)
 		_write_to_err("Usage: cp file_from file_to", ""), exit(97);
-
+	if (av[1] == NULL)
+		_write_to_err("Error: Can't read from file ", av[1]), exit(98);
+	if (av[2] == NULL)
+		_write_to_err("Error: Can't write to ", av[2]), exit(99);
 	fdr = open(av[1], O_RDONLY);
 	if (fdr == -1)
 		_write_to_err("Error: Can't read from file ", av[1]), exit(98);
@@ -54,7 +57,11 @@ int main(int ac, char **av)
 				_write_to_err("Error: Can't write to ", av[2]), exit(99);
 		}
 	}
-	close(fdr);
-	close(fdw);
+	err = close(fdr);
+	if (err == -1)
+		dprintf(1, "Error: Can't close fd %d", fdr);
+	err = close(fdw);
+	if (err == -1)
+		dprintf(1, "Error: Can't close fd %d", fdw);
 	return (0);
 }
