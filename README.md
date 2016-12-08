@@ -4,8 +4,7 @@
 **Welcome to Low-Level Programming!**
 
 This repository holds my assignment solutions from the low-level programming 
-track at [Holberton School](https://www.holbertonschool.com). Each folder contains functions on a given topic 
-that fulfill given assignment specifications.
+track at [Holberton School](https://www.holbertonschool.com).
 
 **Whats in here?**
 
