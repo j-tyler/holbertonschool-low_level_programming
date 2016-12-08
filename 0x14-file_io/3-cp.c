@@ -42,36 +42,25 @@ int main(int ac, char **av)
 		dprintf(2, "Error: Can't read from file %s\n", av[1]), exit(98);
 	fdw = open(av[2], O_WRONLY | O_CREAT | O_APPEND, mode);
 	if (fdw == -1)
-	{
-		dprintf(2, "Error: Can't write to %s\n", av[2]), close(fdr);
-		exit(99);
-	}
+		dprintf(2, "Error: Can't write to %s\n", av[2]), exit(99);
 	err = bytes = 1;
 	while (bytes)
 	{
 		bytes = read(fdr, buf, 1204);
 		if (bytes == -1)
-		{
-			dprintf(2, "Error: Can't read from file %s\n", av[1]), close(fdr);
-			close(fdw);
-			exit(98);
-		}
+			dprintf(2, "Error: Can't read from file %s\n", av[1]), exit(98);
 		if (bytes > 0)
 		{
 			err = write(fdw, buf, bytes);
 			if (err == -1)
-			{
-				dprintf(2, "Error: Can't write to %s\n", av[2]), close(fdr);
-				close(fdr);
-				exit(99);
-			}
+				dprintf(2, "Error: Can't write to %s\n", av[2]), exit(99);
 		}
 	}
 	err = close(fdr);
 	if (err == -1)
-		dprintf(2, "Error: Can't close fd %d\n", fdr);
+		dprintf(2, "Error: Can't close fd %d\n", fdr), exit(100);
 	err = close(fdw);
 	if (err == -1)
-		dprintf(2, "Error: Can't close fd %d\n", fdw);
+		dprintf(2, "Error: Can't close fd %d\n", fdw), exit(100);
 	return (0);
 }
