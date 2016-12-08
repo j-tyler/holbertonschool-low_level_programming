@@ -8,7 +8,8 @@
  */
 int create_file(const char *filename, char *text_content)
 {
-	int fd, err, bytes;
+	int fd;
+	ssize_t err, bytes;
 	mode_t mode = S_IRUSR | S_IWUSR;
 
 	if (filename == NULL)
