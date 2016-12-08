@@ -47,13 +47,9 @@ int main(int ac, char **av)
 	while (bytes)
 	{
 		bytes = read(fdr, buf, 1204);
-		if (bytes == -1)
-			dprintf(2, "Error: Can't read from file %s\n", av[1]), exit(98);
 		if (bytes > 0)
 		{
 			err = write(fdw, buf, bytes);
-			if (err == -1)
-				dprintf(2, "Error: Can't write to %s\n", av[2]), exit(99);
 		}
 	}
 	err = close(fdr);
