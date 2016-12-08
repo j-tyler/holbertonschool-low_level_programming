@@ -9,7 +9,7 @@
 int main(int ac, char **av)
 {
 	int fdr, fdw, err, bytes;
-	char buf[1204];
+	char buf[BUFFERSIZE];
 	mode_t mode = S_IRUSR | S_IWUSR | S_IRGRP | S_IWGRP | S_IROTH;
 
 	if (ac != 3)
@@ -27,7 +27,7 @@ int main(int ac, char **av)
 	err = bytes = 1;
 	while (bytes)
 	{
-		bytes = read(fdr, buf, 1204);
+		bytes = read(fdr, buf, BUFFERSIZE);
 		if (bytes == -1)
 			dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", av[1]), exit(98);
 		if (bytes > 0)
