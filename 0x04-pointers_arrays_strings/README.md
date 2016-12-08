@@ -1,3 +1,6 @@
-Assignments for low-level programming 0x04
-Arrays and Pointers
-Oct 25 2016
+<img src="https://www.holbertonschool.com/assets/holberton-logo-1cc451260ca3cd297def53f2250a9794810667c7ca7b5fa5879a569a457bf16f.png" alt="Holberton logo">
+# Pointers, Arrays and Strings
+
+**Assignment Solutions from [Justin Marsh](https://twitter.com/dogonthecircuit)**
+
+[Holberton School](https://www.holbertonschool.com) assignment solutions for October 25th, 2016.
