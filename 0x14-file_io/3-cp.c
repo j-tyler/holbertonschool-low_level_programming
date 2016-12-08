@@ -1,24 +1,5 @@
 #include "holberton.h"
 /**
- * _write_to_err - write to std error two strings concatonated
- * @s1: string 1
- * @s2: string 2
- */
-void _write_to_err(char *s1, char *s2)
-{
-	char arr[256];
-	int i, j;
-
-	i = j = 0;
-	while (s1[i])
-		arr[i] = s1[i], i++;
-	while (s2[j])
-		arr[i] = s2[j], i++, j++;
-	arr[i] = '\n';
-
-	write(2, arr, i);
-}
-/**
  * main - copy the content of one file to another
  * @ac: argument count
  * @av: argument vector
