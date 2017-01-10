@@ -16,6 +16,8 @@ dlistint_t *_create_node(dlistint_t *next, const int n)
 	node->prev = NULL;
 	node->next = next;
 	node->n = n;
+	if (next != NULL)
+		next->prev = node;
 
 	return (node);
 }
