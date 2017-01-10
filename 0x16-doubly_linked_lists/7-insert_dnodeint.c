@@ -39,7 +39,10 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 		return (NULL);
 	if (idx == 0)
 	{
-		*h = _create_node_2((*h)->prev, *h, n);
+		if (*h == NULL)
+			*h = _create_node_2(NULL, NULL, n);
+		else
+			*h = _create_node_2((*h)->prev, *h, n);
 		return (*h);
 	}
 	i = 0;
