@@ -11,5 +11,11 @@ hash_table_t *hash_table_create(unsigned long int size)
 	if (creation == NULL)
 		return (NULL);
 	creation->array = malloc(sizeof(char *) * size);
+	if (creation->array == NULL)
+	{
+		free(creation);
+		return (NULL);
+	}
+	creation->size = size;
 	return creation;
 }
