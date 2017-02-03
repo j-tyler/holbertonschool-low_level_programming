@@ -7,6 +7,9 @@
 hash_table_t *hash_table_create(unsigned long int size)
 {
 	hash_table_t *creation;
+
+	if (size == 0)
+		return (NULL);
 	creation = malloc(sizeof(hash_table_t));
 	if (creation == NULL)
 		return (NULL);
@@ -16,6 +19,7 @@ hash_table_t *hash_table_create(unsigned long int size)
 		free(creation);
 		return (NULL);
 	}
+	memset(creation->array, '\0', size);
 	creation->size = size;
 	return creation;
 }
