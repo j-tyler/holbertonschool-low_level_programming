@@ -19,7 +19,6 @@ hash_table_t *hash_table_create(unsigned long int size)
 		free(creation);
 		return (NULL);
 	}
-	memset(creation->array, '\0', size);
 	creation->size = size;
 	return creation;
 }
