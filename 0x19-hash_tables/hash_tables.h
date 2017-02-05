@@ -37,7 +37,8 @@ unsigned long int key_index(const unsigned char *key, unsigned long int size);
 int hash_table_set(hash_table_t *ht, const char *key, const char *value);
 hash_node_t *key_exists(hash_node_t *h, const char *key);
 int key_match(const char *k1, const char *k2);
-const char *key_value(hash_node_t *h, const char *key);
+char *key_value(hash_node_t *h, const char *key);
 int key_insert(hash_node_t **h, const char *key, const char *value);
+char *hash_table_get(const hash_table_t *ht, const char *key);
 
 #endif

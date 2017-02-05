@@ -60,7 +60,7 @@ int key_match(const char *k1, const char *k2)
  * @key: key to search for
  * Return: Value found, NULL if not in table
  */
-const char *key_value(hash_node_t *h, const char *key)
+char *key_value(hash_node_t *h, const char *key)
 {
 	hash_node_t *tmp;
 
