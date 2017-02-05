@@ -39,7 +39,7 @@ hash_node_t *key_exists(hash_node_t *h, const char *key)
  * key_match - Check keys for matchs
  * @k1: first key
  * @k2: second key
- * Return 1 if match, 0 if no match
+ * Return: 1 if match, 0 if no match
  */
 int key_match(const char *k1, const char *k2)
 {
