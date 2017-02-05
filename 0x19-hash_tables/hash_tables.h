@@ -1,5 +1,6 @@
 #ifndef HASH_H
 #define HASH_H
+#include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 /**
@@ -40,5 +41,6 @@ int key_match(const char *k1, const char *k2);
 char *key_value(hash_node_t *h, const char *key);
 int key_insert(hash_node_t **h, const char *key, const char *value);
 char *hash_table_get(const hash_table_t *ht, const char *key);
+void hash_table_print(const hash_table_t *ht);
 
 #endif
