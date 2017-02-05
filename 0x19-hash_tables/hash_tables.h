@@ -1,6 +1,7 @@
 #ifndef HASH_H
 #define HASH_H
 #include <stdlib.h>
+#include <string.h>
 /**
  * struct hash_node_s - Node of a hash table
  *
@@ -33,5 +34,10 @@ typedef struct hash_table_s
 hash_table_t *hash_table_create(unsigned long int size);
 unsigned long int hash_djb2(const unsigned char *str);
 unsigned long int key_index(const unsigned char *key, unsigned long int size);
+int hash_table_set(hash_table_t *ht, const char *key, const char *value);
+hash_node_t *key_exists(hash_node_t *h, const char *key);
+int key_match(const char *k1, const char *k2);
+const char *key_value(hash_node_t *h, const char *key);
+int key_insert(hash_node_t **h, const char *key, const char *value);
 
 #endif
