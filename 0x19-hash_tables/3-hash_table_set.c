@@ -83,14 +83,12 @@ int key_insert(hash_node_t **h, const char *key, const char *value)
 	tmp = key_exists(*h, key);
 	if (tmp)
 	{
-		newnode = tmp;
+		tmp->value = strdup(value);
+		return (1)
 	}
-	else
-	{
-		newnode = malloc(sizeof(hash_node_t));
-		if (newnode == NULL)
-			return (0);
-	}
+	newnode = malloc(sizeof(hash_node_t));
+	if (newnode == NULL)
+		return (0);
 	newnode->key = strdup(key);
 	newnode->value = strdup(value);
 	newnode->next = *h;
