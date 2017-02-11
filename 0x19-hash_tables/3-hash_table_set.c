@@ -84,7 +84,7 @@ int key_insert(hash_node_t **h, const char *key, const char *value)
 	if (tmp)
 	{
 		tmp->value = strdup(value);
-		return (1)
+		return (1);
 	}
 	newnode = malloc(sizeof(hash_node_t));
 	if (newnode == NULL)
