@@ -15,5 +15,6 @@ As such, the code here are samples of my work as time progressed. If
 you are interested in my work in larger-scale complete programs, 
 see any of these week long projects that I have worked on:
 
-[Recreation of printf](https://github.com/j-tyler/printf).
+[Modular printf](https://github.com/j-tyler/printf).
 
+[HSH - a Linux Shell](https://github.com/j-tyler/simple_shell).
