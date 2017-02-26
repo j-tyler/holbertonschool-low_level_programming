@@ -1,9 +1,9 @@
-CC=gcc $(CFLAGS)
+CC=gcc $(MyFlags)
 SRC=main.c holberton.c
 OBJ=$(SRC:.c=.o)
 NAME=holberton
-RM=rm
 CFLAGS=-Wall -Werror -Wextra -pedantic
+MyFlags=-Wall -Werror -Wextra -pedantic
 
 all: $(SRC) $(NAME)
 
