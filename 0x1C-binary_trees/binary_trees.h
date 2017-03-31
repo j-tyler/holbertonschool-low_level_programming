@@ -65,4 +65,7 @@ size_t binary_tree_depth(const binary_tree_t *node);
 
 /* Task 11 Size */
 size_t binary_tree_size(const binary_tree_t *tree);
+
+/* Task 12 Leaves */
+size_t binary_tree_leaves(const binary_tree_t *tree);
 #endif
