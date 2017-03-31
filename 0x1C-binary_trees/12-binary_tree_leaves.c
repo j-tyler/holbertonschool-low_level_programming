@@ -3,6 +3,7 @@
 /**
  * binary_tree_leaves - Count the leaves of the binary tree
  * @tree: tree to operate on
+ * Return: Number of leaves in tree
  */
 size_t binary_tree_leaves(const binary_tree_t *tree)
 {
